@@ -1,0 +1,215 @@
+Using pre-set license
+Built from '2021.1/staging' branch; Version is '2021.1.18f1 (25bdc3efbc2d) revision 2473411'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1466; Version 2009; 64bit' Language: 'en' Physical Memory: 16286 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.1.18f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/asdaman69/Desktop/college 6+2/unity project/KeebSimTesting
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51656
+Successfully changed project path to: C:/Users/asdaman69/Desktop/college 6+2/unity project/KeebSimTesting
+C:/Users/asdaman69/Desktop/college 6+2/unity project/KeebSimTesting
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 94.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.1.18f1 (25bdc3efbc2d)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/asdaman69/Desktop/college 6+2/unity project/KeebSimTesting/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Vendor:   NVIDIA
+    VRAM:     12143 MB
+    Driver:   30.0.14.9729
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56500
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.003219 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 92.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.416 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1416ms)
+		BeginReloadAssembly (72ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (507ms)
+			LoadAssemblies (70ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (182ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (241ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (93ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (106ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006885 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\asdaman69\Desktop\college 6+2\unity project\KeebSimTesting\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\asdaman69\Desktop\college 6+2\unity project\KeebSimTesting\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 89.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.411 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1412ms)
+		BeginReloadAssembly (174ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (1165ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (388ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (514ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (90ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (319ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3488 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 123.3 MB.
+System memory in use after: 123.5 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3933.
+Total: 3.589100 ms (FindLiveObjects: 0.291800 ms CreateObjectMapping: 0.083600 ms MarkObjects: 3.149200 ms  DeleteObjects: 0.063000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  colorSpace: 1 -> 0
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/GamingRoom.glb
+  artifactKey: Guid(d7d96e2d52e9b594586f3244a94317cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GamingRoom.glb using Guid(d7d96e2d52e9b594586f3244a94317cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c97b5a03a452876b311897f5700085a') in 0.988970 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.351443 seconds.
+  path: Assets/GamingRoom.glb
+  artifactKey: Guid(d7d96e2d52e9b594586f3244a94317cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GamingRoom.glb using Guid(d7d96e2d52e9b594586f3244a94317cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3525beea8cfdde97fd24e44bba0a034c') in 0.404527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1006.364474 seconds.
+  path: Assets/GamingRoom.gltf
+  artifactKey: Guid(fd65cb3945d91124db3bb88929b7cc66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GamingRoom.gltf using Guid(fd65cb3945d91124db3bb88929b7cc66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcc81aac530f51d5869cc48773924e5b') in 0.604147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 368.494585 seconds.
+  path: Assets/GamingRoom2.gltf
+  artifactKey: Guid(e0eb24988719f8a41936ef89000375c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GamingRoom2.gltf using Guid(e0eb24988719f8a41936ef89000375c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad56728e347a90186207e2f98321d280') in 0.021684 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1423.324909 seconds.
+  path: Assets/GamingRoom3.gltf
+  artifactKey: Guid(65b8090f505fef74caebf82c96669aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GamingRoom3.gltf using Guid(65b8090f505fef74caebf82c96669aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd806bef246e76f905fc644a35754bee9') in 0.038777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.264117 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.006580 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.992896 seconds.
+  path: Assets/GamingRoom23.gltf
+  artifactKey: Guid(5be205c1edb9664469d360b86fc059e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GamingRoom23.gltf using Guid(5be205c1edb9664469d360b86fc059e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ee4d3b36cac1b1b31e37aed7b9071e1') in 0.085061 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.571158 seconds.
+  path: Assets/GamingRoom23.gltf
+  artifactKey: Guid(5be205c1edb9664469d360b86fc059e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GamingRoom23.gltf using Guid(5be205c1edb9664469d360b86fc059e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a886a5595603fbe98f8e78b71f86fe80') in 0.037907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.991354 seconds.
+  path: Assets/GamingRoom23.Materials
+  artifactKey: Guid(64b24f328ffcb134fbfa64d43940514d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GamingRoom23.Materials using Guid(64b24f328ffcb134fbfa64d43940514d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a86f84d50a63c46cd544456e5466fbe') in 0.006248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.855454 seconds.
+  path: Assets/GamingRoom23.Materials/wood.mat
+  artifactKey: Guid(d1ff7983ad6c1674f949a31990d8c87a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GamingRoom23.Materials/wood.mat using Guid(d1ff7983ad6c1674f949a31990d8c87a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1df4fd916d16d601f5a7dd25625270f') in 0.019198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 340.194089 seconds.
+  path: Assets/eragrtysrysdjrysd.gltf
+  artifactKey: Guid(3aace30352e5b414c96db15922808784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/eragrtysrysdjrysd.gltf using Guid(3aace30352e5b414c96db15922808784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac90ed68ee556dd0eb51d5a27760ae11') in 0.027174 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.808286 seconds.
+  path: Assets/eragrtysrysdjrysd.gltf
+  artifactKey: Guid(3aace30352e5b414c96db15922808784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/eragrtysrysdjrysd.gltf using Guid(3aace30352e5b414c96db15922808784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18a4877de25ec1a2534c5bc1e1a53bf') in 0.014464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.746574 seconds.
+  path: Assets/eragrtysrysdjrysd.Textures
+  artifactKey: Guid(aced560a3cfc6ab40a087c803f1384c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/eragrtysrysdjrysd.Textures using Guid(aced560a3cfc6ab40a087c803f1384c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '974563fbac0f9a68b37537f588614190') in 0.006457 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
