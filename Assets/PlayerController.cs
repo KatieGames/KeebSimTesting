@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 
 	[Header("Player Options")]
 	public float playerHeight;
+	public float buggyRadius;
 
 	[Header("Movement Options")]
 	public float movementSpeed;
@@ -106,7 +107,7 @@ public class PlayerController : MonoBehaviour {
 	private void GroundConfirm (RaycastHit tempHit) {
 
 		Collider[] col = new Collider[3];
-		int num = Physics.OverlapSphereNonAlloc (transform.TransformPoint (groundCheckPoint), 1f, col, discludePlayer);
+		int num = Physics.OverlapSphereNonAlloc (transform.TransformPoint (groundCheckPoint), buggyRadius, col, discludePlayer);
 		Debug.Log(num);
 
 		grounded = false;
