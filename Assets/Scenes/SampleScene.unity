@@ -832,7 +832,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800490509}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7a36ba656608f64a8a12a39362597db, type: 3}
   m_Name: 
@@ -953,10 +953,10 @@ MonoBehaviour:
   money: 0
   experience: 0
   currentDay: 0
-  components: 
-  buildsProgress: 
-  inboxMisc: 
-  inboxOngoing: 
+  components: 00000000
+  buildsProgress: 00000000
+  inboxMisc: 00000000
+  inboxOngoing: 00000000
 --- !u!4 &1055656827
 Transform:
   m_ObjectHideFlags: 0

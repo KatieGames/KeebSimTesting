@@ -37,18 +37,7 @@ public class PlayerData
         money = player.money;
         experience = player.experience;
         currentDay = player.currentDay;
-    }
-}
-
-public class Components
-{
-    //arrays
-    public int[] components; //def value for no comps is 1
-    public int[] buildsProgress; //3 can be saved
-    
-    public Components (Building building)
-    {
-        components = building.components;
-        buildsProgress = building.buildsProgress;
+        components = player.components;
+        buildsProgress = player.buildsProgress;
     }
 }
