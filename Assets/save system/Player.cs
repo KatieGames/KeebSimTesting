@@ -35,4 +35,21 @@ public class Player : MonoBehaviour
         // inboxMisc = data.inboxMisc; //not yet implemented
         // inboxOngoing = data.inboxOngoing;
     }
+
+    public void SetMoney(int Tmoney)
+    {
+        money += Tmoney;
+        Debug.Log(money);
+    }
+
+    public void AddExperience(int Texperience)
+    {
+        //each level is 1000exp
+        experience += Texperience;
+        Debug.Log(experience);
+
+        //level calculation
+        level = experience/1000;
+        Debug.Log(level);
+    }
 }
