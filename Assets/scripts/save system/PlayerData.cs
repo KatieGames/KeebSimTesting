@@ -21,6 +21,7 @@ public class PlayerData
     public int[] buildsProgress; //3 can be saved
     public int[] inboxMisc; //every email is in a list, if its 3 in here that means the email 3 will be shown
     public int[] inboxOngoing; //every email is in a list, if its 3 in here that means the email 3 will be shown
+    public string[] calendarDays; //every calendar day is an array entry
 
     //build save system
     //every component is stored as an int between 12 and 99, with 11 meaning no component
@@ -39,5 +40,6 @@ public class PlayerData
         currentDay = player.currentDay;
         components = player.components;
         buildsProgress = player.buildsProgress;
+        calendarDays = player.calendarDays;
     }
 }

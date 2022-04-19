@@ -1266,6 +1266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1055656827}
   - component: {fileID: 1055656826}
+  - component: {fileID: 1055656828}
   m_Layer: 0
   m_Name: GameManagement
   m_TagString: Untagged
@@ -1288,11 +1289,43 @@ MonoBehaviour:
   level: 0
   money: 0
   experience: 0
-  currentDay: 0
+  currentDay: 5
   components: 00000000
   buildsProgress: 00000000
   inboxMisc: 00000000
   inboxOngoing: 00000000
+  calendarDays:
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
+  - 125601@566756@689512@674529
 --- !u!4 &1055656827
 Transform:
   m_ObjectHideFlags: 0
@@ -1307,6 +1340,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055656828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055656825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69dc8657cd259fc4dbd03498d77e04d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1055656825}
+  events: []
 --- !u!1 &1079415844
 GameObject:
   m_ObjectHideFlags: 0
