@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public int currentDay;
 
     //arrays
-    public int[] components; //def value for no comps is 1
+    public string[] components; //def value for no comps is 1
     public int[] buildsProgress; //3 can be saved
     public int[] inboxMisc; //every email is in a list, if its 3 in here that means the email 3 will be shown
     public int[] inboxOngoing; //every email is in a list, if its 3 in here that means the email 3 will be shown

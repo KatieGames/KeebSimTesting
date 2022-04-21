@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class calendar : MonoBehaviour
 {
     public GameObject player;
+    public GameObject[] calendarText;
     private string[] calendarDays;
     private int valuesAmnt;
     private int currentDay;
     private int dayElements;
-    public string[] events;
+    private string[] events;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class calendar : MonoBehaviour
         CheckToday();
         CheckPast();
         CheckFuture();
+        SetText();
     }
 
     void CheckToday()
@@ -79,8 +82,8 @@ public class calendar : MonoBehaviour
 
                 //any edits and data reading to be done here
 
-                //setting the last bit to 02 meaning due today
-                dayPart3 = "02";
+                //setting the last bit to 01 meaning due today
+                dayPart3 = "01";
 
                 //combining string and setting the last bit
                 stringDay = dayPart1 + dayPart2 + dayPart3;
@@ -163,8 +166,8 @@ public class calendar : MonoBehaviour
 
                     //any edits and data reading to be done here
 
-                    //setting the last bit to 01 meaning on time
-                    dayPart3 = "01";
+                    //setting the last bit to 00 meaning on time
+                    dayPart3 = "00";
 
                     //combining string and setting the last bit
                     stringDay = dayPart1 + dayPart2 + dayPart3;
@@ -245,7 +248,7 @@ public class calendar : MonoBehaviour
                     //any edits and data reading to be done here
 
                     //setting the last bit to 02 meaning late
-                    dayPart3 = "03";
+                    dayPart3 = "02";
 
                     //combining string and setting the last bit
                     stringDay = dayPart1 + dayPart2 + dayPart3;
@@ -253,6 +256,91 @@ public class calendar : MonoBehaviour
                     //reassignment in the events array
                     events[c] = stringDay;
                     //Debug.Log(stringDay);
+
+                    //sets c to the next item in events list
+                    c++;
+                }
+
+                // foreach (string value in events)
+                // {
+                //     Debug.Log(value);
+                // }
+
+                Player playerData = player.GetComponent<Player>();
+                playerData.calendarDays[i] = string.Join("@", events);
+            }
+            else
+            {
+                //Debug.Log("No entries found for past");
+            }
+            i++;
+        }
+    }
+
+    void SetText()
+    {
+                //basic counter for loop
+        for(int i = 0; i < 29;)
+        {
+            //if the day isnt empty
+            if(calendarDays[i] != "")
+            {
+                //temp string for the days value
+                string stringDay;
+
+                //counter for what character the divider starts at
+                int c = 0;
+
+                //splitted aray of day strings
+                string[] splittedDay = {"", "", ""};
+
+                //temp strings for splitting
+                string dayPart1;
+                string dayPart2;
+                string dayPart3;
+
+                //sets the current selected day to a local variable
+                stringDay = calendarDays[i];
+
+                //splits the stringDay on each @ sign
+                events = stringDay.Split('@');
+
+
+                for(int e = 0; e <= calendarDays[i].Length;)
+                {
+                    //seperates it by the right amount
+                    e += 7;
+
+                    // //breaks it down into 3 sections
+                    // dayPart1 = events[c].Substring(0,2);
+                    // splittedDay[0] = dayPart1;
+                    // //Debug.Log(splittedDay[0]);
+                    
+                    // //setting of int2
+                    // dayPart2 = events[c].Substring(2,2);
+                    // splittedDay[1] = dayPart2;
+                    // //Debug.Log(splittedDay[1]);
+
+                    // //setting of int3
+                    // dayPart3 = events[c].Substring(4,2);
+                    // splittedDay[2] = dayPart3;
+                    // //Debug.Log(splittedDay[2]);
+
+                    calendarText[i].GetComponent<TMPro.TextMeshProUGUI>().text += Decoder.Decode(events[c], 1) + " " +  Decoder.Decode(events[c], 2)+ " " +  Decoder.Decode(events[c], 3) + " ";
+                    
+
+
+                    //any edits and data reading to be done here
+
+                    // //setting the last bit to 02 meaning late
+                    // dayPart3 = "03";
+
+                    // //combining string and setting the last bit
+                    // stringDay = dayPart1 + dayPart2 + dayPart3;
+                    
+                    // //reassignment in the events array
+                    // events[c] = stringDay;
+                    // //Debug.Log(stringDay);
 
                     //sets c to the next item in events list
                     c++;
