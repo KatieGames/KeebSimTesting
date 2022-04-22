@@ -15,11 +15,11 @@ C:/Users/asdaman69/Desktop/repos/KeebSimTesting
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62603
+51606
 Successfully changed project path to: C:/Users/asdaman69/Desktop/repos/KeebSimTesting
 C:/Users/asdaman69/Desktop/repos/KeebSimTesting
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 100.59 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 115.06 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.18f1 (25bdc3efbc2d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,80 +35,80 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56180
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56024
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.18f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.003248 seconds.
+Registered in 0.003151 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 118.06 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 119.12 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.467 seconds
+- Completed reload, in  1.483 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1467ms)
-		BeginReloadAssembly (65ms)
+	ReloadAssembly (1484ms)
+		BeginReloadAssembly (70ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (516ms)
-			LoadAssemblies (63ms)
+		EndReloadAssembly (525ms)
+			LoadAssemblies (67ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (174ms)
+			SetupTypeCache (177ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (264ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (269ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (118ms)
+				RefreshPlugins (119ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (103ms)
-				ProcessInitializeOnLoadMethodAttributes (31ms)
+				ProcessInitializeOnLoadAttributes (107ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006640 seconds.
+Registered in 0.006822 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\asdaman69\Desktop\repos\KeebSimTesting\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\asdaman69\Desktop\repos\KeebSimTesting\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 100.81 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 103.74 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.518 seconds
+- Completed reload, in  1.546 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1518ms)
-		BeginReloadAssembly (162ms)
+	ReloadAssembly (1546ms)
+		BeginReloadAssembly (166ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (1287ms)
-			LoadAssemblies (106ms)
+		EndReloadAssembly (1312ms)
+			LoadAssemblies (109ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (370ms)
+			SetupTypeCache (381ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (659ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (669ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (101ms)
+				RefreshPlugins (104ms)
 				BeforeProcessingInitializeOnLoad (89ms)
-				ProcessInitializeOnLoadAttributes (449ms)
+				ProcessInitializeOnLoadAttributes (455ms)
 				ProcessInitializeOnLoadMethodAttributes (5ms)
 				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
@@ -118,14 +118,14 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.65 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3572 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 127.6 MB.
 System memory in use after: 127.9 MB.
 
 Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 4016.
-Total: 3.736900 ms (FindLiveObjects: 0.277900 ms CreateObjectMapping: 0.084800 ms MarkObjects: 3.312200 ms  DeleteObjects: 0.060700 ms)
+Total: 4.249200 ms (FindLiveObjects: 0.310600 ms CreateObjectMapping: 0.085600 ms MarkObjects: 3.769500 ms  DeleteObjects: 0.082000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -139,133 +139,79 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/PhotoshopFiles/cart.png
-  artifactKey: Guid(9838dfc90bba94e4b8fc864b47249910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PhotoshopFiles/cart.png using Guid(9838dfc90bba94e4b8fc864b47249910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40e7e3050378f0dbd3f7d66c76058a18') in 0.107393 seconds 
+  path: Assets/ansi_cherry.glb
+  artifactKey: Guid(7fffffdde93a8d74a94b09486313f0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ansi_cherry.glb using Guid(7fffffdde93a8d74a94b09486313f0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a338b2dc4f139175b5f6a8accd9c8569') in 1.947852 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.723019 seconds.
-  path: Assets/PhotoshopFiles/cart.png
-  artifactKey: Guid(9838dfc90bba94e4b8fc864b47249910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PhotoshopFiles/cart.png using Guid(9838dfc90bba94e4b8fc864b47249910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c61099c8886bfa067dfaa9f35295d6c3') in 0.012159 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006355 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\asdaman69\Desktop\repos\KeebSimTesting\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\asdaman69\Desktop\repos\KeebSimTesting\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.355 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1356ms)
-		BeginReloadAssembly (136ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (39ms)
-		EndReloadAssembly (1149ms)
-			LoadAssemblies (110ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (391ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (495ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (409ms)
-				ProcessInitializeOnLoadMethodAttributes (5ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.71 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3546 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 134.6 MB.
-System memory in use after: 134.8 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 4053.
-Total: 3.698600 ms (FindLiveObjects: 0.302300 ms CreateObjectMapping: 0.087200 ms MarkObjects: 3.292800 ms  DeleteObjects: 0.015100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 291.588161 seconds.
+  path: Assets/ansi_cherry.glb
+  artifactKey: Guid(7fffffdde93a8d74a94b09486313f0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ansi_cherry.glb using Guid(7fffffdde93a8d74a94b09486313f0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7ac7d4a3295fffe40513e9f2ce46741') in 8.466346 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 5127.316310 seconds.
-  path: Assets/PhotoshopFiles/Emails.png
-  artifactKey: Guid(b47357e3f464bb640adde7fdff1a551c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PhotoshopFiles/Emails.png using Guid(b47357e3f464bb640adde7fdff1a551c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b9ff24e7cdf31a885db9a42002ba811') in 0.114763 seconds 
+  Time since last request: 133.438838 seconds.
+  path: Assets/ansi_cherry.glb
+  artifactKey: Guid(7fffffdde93a8d74a94b09486313f0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ansi_cherry.glb using Guid(7fffffdde93a8d74a94b09486313f0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae617c59f22e3eb44723346ca6ddd870') in 7.909541 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000207 seconds.
-  path: Assets/PhotoshopFiles/Shop.png
-  artifactKey: Guid(c0e188a8a26b0a74182d668c634e5c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PhotoshopFiles/Shop.png using Guid(c0e188a8a26b0a74182d668c634e5c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6674c6c5283487457b2288705d159b7') in 0.013222 seconds 
+  Time since last request: 7.573417 seconds.
+  path: Assets/ansi_cherry.Materials/Alphas.mat
+  artifactKey: Guid(22aa25fbc6558e24eb6798284f0d8d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ansi_cherry.Materials/Alphas.mat using Guid(22aa25fbc6558e24eb6798284f0d8d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87db70bd0c4123a9b49d20a5880324d4') in 0.102285 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000314 seconds.
-  path: Assets/PhotoshopFiles/Shop.psd
-  artifactKey: Guid(50b439db687468d4f92cbd2f109ad40a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PhotoshopFiles/Shop.psd using Guid(50b439db687468d4f92cbd2f109ad40a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09dc229dc841d469158373157db5d2c6') in 0.011759 seconds 
+  Time since last request: 0.000214 seconds.
+  path: Assets/ansi_cherry.Materials/Modifiers.mat
+  artifactKey: Guid(cb13f703936070643b89e29bc14e0423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ansi_cherry.Materials/Modifiers.mat using Guid(cb13f703936070643b89e29bc14e0423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d24918bb1e08d249762324166382b2') in 0.016406 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/PhotoshopFiles/Emails.psd
-  artifactKey: Guid(02f0909ef423de641bfb3c34b3d678b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PhotoshopFiles/Emails.psd using Guid(02f0909ef423de641bfb3c34b3d678b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42c56f4aa85787a50dc254e28ccd9b22') in 0.007178 seconds 
+  Time since last request: 0.000252 seconds.
+  path: Assets/ansi_cherry.Materials/Text_Alphas.mat
+  artifactKey: Guid(a6fca82b0d55c7c47a5e5ec7f55cfebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ansi_cherry.Materials/Text_Alphas.mat using Guid(a6fca82b0d55c7c47a5e5ec7f55cfebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73eb4e2fadaec7acaf578fd55a4664d') in 0.013987 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.615391 seconds.
-  path: Assets/PhotoshopFiles/Shop.png
-  artifactKey: Guid(c0e188a8a26b0a74182d668c634e5c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PhotoshopFiles/Shop.png using Guid(c0e188a8a26b0a74182d668c634e5c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82268a23925a6867d62e969841c8d3e2') in 0.029252 seconds 
+  Time since last request: 0.000227 seconds.
+  path: Assets/ansi_cherry.Materials/Floor.mat
+  artifactKey: Guid(2c6284c36b84c2d4aa1fe3e83c5ce220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ansi_cherry.Materials/Floor.mat using Guid(2c6284c36b84c2d4aa1fe3e83c5ce220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0afc30aacdfd1ca3abf1ffd0730d6bb4') in 0.028958 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.383645 seconds.
-  path: Assets/PhotoshopFiles/Emails.png
-  artifactKey: Guid(b47357e3f464bb640adde7fdff1a551c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PhotoshopFiles/Emails.png using Guid(b47357e3f464bb640adde7fdff1a551c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b26a7fa350ad1b089b23b368f9117875') in 0.012609 seconds 
+  Time since last request: 0.000233 seconds.
+  path: Assets/ansi_cherry.Materials/Text_Modifiers.mat
+  artifactKey: Guid(54b0715ef5c58184487438fc2f85dfdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ansi_cherry.Materials/Text_Modifiers.mat using Guid(54b0715ef5c58184487438fc2f85dfdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4a29c225a44a7b22cb1def9d395f739') in 0.014992 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 639.438849 seconds.
-  path: Assets/menuAssets/KeebMenu.png
-  artifactKey: Guid(e9a9ef07419c5fc4d9d77165a050955f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/menuAssets/KeebMenu.png using Guid(e9a9ef07419c5fc4d9d77165a050955f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93a497b2e7d28c3e624b71de849d3cbd') in 0.026852 seconds 
+  Time since last request: 1188.434665 seconds.
+  path: Assets/ansi_cherry.glb
+  artifactKey: Guid(7fffffdde93a8d74a94b09486313f0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ansi_cherry.glb using Guid(7fffffdde93a8d74a94b09486313f0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1410aa9ec76ca35f8849c1489c32547b') in 0.007522 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000207 seconds.
-  path: Assets/menuAssets/Options Menu.prefab
-  artifactKey: Guid(b8bfe11d043c0bf47908ec66bf81d997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/menuAssets/Options Menu.prefab using Guid(b8bfe11d043c0bf47908ec66bf81d997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c6fba5a986d3821c48aac0a9fd048d9') in 0.107793 seconds 
+  Time since last request: 95.699225 seconds.
+  path: Assets/ansi_cherry.fbx
+  artifactKey: Guid(0a4e611155a3a434ebfb7f629f68f4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ansi_cherry.fbx using Guid(0a4e611155a3a434ebfb7f629f68f4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a2fda4a078afeed2167c983f3adb82c') in 1.634906 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/menuAssets/Main Menu.prefab
-  artifactKey: Guid(4c63d2dd18f14bd4c8e329501a2f1fdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/menuAssets/Main Menu.prefab using Guid(4c63d2dd18f14bd4c8e329501a2f1fdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23cf698b1ffdb15f42b20d3ccc8d1b4a') in 0.035652 seconds 
+  Time since last request: 2011.968823 seconds.
+  path: Assets/PhotoshopFiles/checklistSortof.png
+  artifactKey: Guid(fbf6c1ea7247f5a4b9fe05df62df85f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PhotoshopFiles/checklistSortof.png using Guid(fbf6c1ea7247f5a4b9fe05df62df85f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99a31e3b167f8f1529015aae4801e075') in 0.212780 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/menuAssets/pauseMenu.prefab
-  artifactKey: Guid(6737b695c22fcff42b34e23672a74c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/menuAssets/pauseMenu.prefab using Guid(6737b695c22fcff42b34e23672a74c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d1f0ee98c99931942b277e730ed8bf6') in 0.032294 seconds 
+  Time since last request: 0.000187 seconds.
+  path: Assets/PhotoshopFiles/PlanningCalendarLogic.png
+  artifactKey: Guid(3751f78d317b16f46902b55ffe7d3bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PhotoshopFiles/PlanningCalendarLogic.png using Guid(3751f78d317b16f46902b55ffe7d3bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8db8931d8230bc8726827ae7bcc717a') in 0.042949 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.906048 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.007100 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
