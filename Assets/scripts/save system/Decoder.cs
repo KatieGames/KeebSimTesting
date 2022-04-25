@@ -65,7 +65,7 @@ public static class Decoder
         //splitted aray of day strings
         string[] splittedEmail = {"", "", "", "", ""};
 
-        //splits into parts. Email, sender, content, due date, cost
+        //splits into parts. Subject, sender, content, due date, cost
         splittedEmail = entry.Split('/');
 
         if(part == 1)

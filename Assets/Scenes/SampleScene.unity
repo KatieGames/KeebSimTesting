@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4944,6 +4944,7 @@ GameObject:
   - component: {fileID: 1055656827}
   - component: {fileID: 1055656826}
   - component: {fileID: 1055656828}
+  - component: {fileID: 1055656829}
   m_Layer: 0
   m_Name: GameManagement
   m_TagString: Untagged
@@ -4973,20 +4974,26 @@ MonoBehaviour:
   - KBD67 pcb
   - KBD67 case
   buildsProgress: 00000000
-  potentialEmails: []
-  inboxMisc:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  inboxOngoing:
-  - 
+  potentialEmails:
+  - 'Congratulations!/Free Iphone/Congratulations sir,madam,miss,master,mr,mrs! You
+    have won iphone free now for giveaway you have entered! Click this link immediatley
+    to claim the prize thats yours: (Bit.ly link to rick roll)'
+  - We met at the bar last night ;)/Sammy/Hey there Tabitha! Thank you for kindly
+    giving me this email to contact you - you were just so dazzling last night. Would
+    you like to arrange another meetup? Perhaps my house this time ;)
+  - "Business opportunity/Naomi Surugaba/Greetings, permit me of my desire to conduct
+    business with you as partner. My father, king of wakanda, has put \xA314.53 trillion
+    worth of cut uncut cut diamonds in the bank of uncut cut uncut diamonds and they
+    have been seized for not correctly being cut. Please send me \xA33500 in $DOGE
+    to 456789tyu3456780w9yu4 and we will be able to clear diamonds of bank and I
+    share half with you promise."
+  - Please send help!/Maternal figure/Hello this is maternal figure. I have taken
+    ill and need your help to find a cure. Doctors say that the only remedy is alien
+    artifacts.
+  - It is time/Unknown/Your time to realign with society has finished, and now it
+    is time to start your mission. A parcel will arrive within the next week.
+  inboxMisc: []
+  inboxOngoing: []
   calendarDays:
   - 010202@000102@010202@000102
   - 
@@ -5078,6 +5085,21 @@ MonoBehaviour:
   - {fileID: 1502379371}
   - {fileID: 1625664773}
   - {fileID: 506503514}
+--- !u!114 &1055656829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055656825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa932f3ed2d0d9049a2912e027508d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1055656825}
+  buttonsList: {fileID: 645153758}
+  buttonPrefab: {fileID: 3777510678797191202, guid: 8b2fd8e27bcabca4e8a214abbdde9d26, type: 3}
 --- !u!1 &1079415844
 GameObject:
   m_ObjectHideFlags: 0
@@ -6047,7 +6069,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1265146486}
-  - component: {fileID: 1265146487}
   m_Layer: 0
   m_Name: Mail
   m_TagString: Untagged
@@ -6077,21 +6098,6 @@ RectTransform:
   m_AnchoredPosition: {x: -6, y: 101}
   m_SizeDelta: {x: 51.527695, y: 51.527695}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1265146487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265146485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa932f3ed2d0d9049a2912e027508d38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1055656825}
-  buttonsList: {fileID: 645153758}
-  buttonPrefab: {fileID: 3777510678797191202, guid: 8b2fd8e27bcabca4e8a214abbdde9d26, type: 3}
 --- !u!1 &1349696583
 GameObject:
   m_ObjectHideFlags: 0

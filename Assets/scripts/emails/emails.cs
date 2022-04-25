@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Linq;
+
 
 public class emails : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class emails : MonoBehaviour
     public GameObject buttonPrefab; //button prefab for email ui
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +25,7 @@ public class emails : MonoBehaviour
         miscEmails = playerData.inboxMisc;
         ongoingEmails = playerData.inboxOngoing;
 
+        GenerateEmails();
         ReadEmails();
     }
 
@@ -32,8 +37,10 @@ public class emails : MonoBehaviour
 
     void GenerateEmails()
     {
+        Player playerData = player.GetComponent<Player>();
+
         //gets a random email
-        int RandNum = Random.Range(0, 10);
+        int RandNum = Random.Range(1, 10);
         int EmailsAmnt = miscEmails.Length;
 
         //generates however many emails chosen by RandNum
@@ -41,8 +48,11 @@ public class emails : MonoBehaviour
         {
             //generates random email
             int RandEmail = Random.Range(0, possibleEmails.Length);
-            miscEmails[EmailsAmnt += 1] = possibleEmails[RandEmail];
+            miscEmails = miscEmails.Append(possibleEmails[RandEmail]).ToArray();
+            //miscEmails[EmailsAmnt += 1] = possibleEmails[RandEmail];
         }
+
+        playerData.inboxMisc = miscEmails;
     }
 
     void ReadEmails()
@@ -51,7 +61,6 @@ public class emails : MonoBehaviour
         int EmailsAmnt = miscEmails.Length;
         for(int i = 0; i < EmailsAmnt; i++)
         {
-
             //makes enough buttons for all emails in inbox
             GameObject tButton;
             tButton = Instantiate(buttonPrefab);
@@ -61,7 +70,9 @@ public class emails : MonoBehaviour
             tButton.transform.localScale = new Vector3(1f,1f,1f);
 
             //changes text to placeholder text
-            tButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = "lorem  ipsum";
+            tButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(miscEmails[i], 1);
+            //sets its buttonNumber int accordingly
+            tButton.GetComponent<emailButtons>().buttonNumber = i;
         }
 
         // foreach (Transform child in buttonsList.transform)
@@ -71,5 +82,29 @@ public class emails : MonoBehaviour
         //         child.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = "lorem  ipsum";
         //     }
         // }
+    }
+
+    public static void DisplayEmail(int buttonNumber)
+    {
+        //for the email content section
+        GameObject subjectContent = GameObject.Find("SubjectContent");
+        GameObject senderContent = GameObject.Find("SenderContent");
+        GameObject bodyContent = GameObject.Find("BodyContent");
+
+        Player playerData = GameObject.Find("GameManagement").GetComponent<Player>();
+
+        string email = playerData.inboxMisc[buttonNumber];
+
+        //not yet implemented
+        //GameObject dueDate = GameObject.Find("DueContent");
+        //GameObject cost = GameObject.Find("CostContent");
+        Debug.Log("DisplayingMail");
+        subjectContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 1);
+        senderContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 2);
+        bodyContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 3);
+
+        // subjectContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 1);
+        // subjectContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 1);
+
     }
 }
