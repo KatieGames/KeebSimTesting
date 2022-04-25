@@ -45,9 +45,6 @@ public static class Decoder
 
 
 
-
-
-
         if(bit == 1)
         {
             return decodedDay[0];
@@ -62,17 +59,34 @@ public static class Decoder
             return "tf is this";
         }
     }
+
+    public static string DecodeEmail(string entry, int part)
+    {
+        //splitted aray of day strings
+        string[] splittedEmail = {"", "", "", "", ""};
+
+        //splits into parts. Email, sender, content, due date, cost
+        splittedEmail = entry.Split('/');
+
+        if(part == 1)
+        {
+            return splittedEmail[0];
+        }
+        else if(part == 2){
+            return splittedEmail[1];
+        }
+        else if(part == 3){
+            return splittedEmail[2];
+        }
+        else if(part == 4){
+            return splittedEmail[3];
+        }
+        else if(part == 5){
+            return splittedEmail[4];
+        }
+        else{
+            return "tf is this";
+        }
+    }
 }
 
-            // if(dayPart3 == "01")
-            // {
-            //     return "on Time";
-            // }
-            // if(dayPart3 == "02")
-            // {
-            //     return "due Today";
-            // }
-            // if(dayPart3 == "03")
-            // {
-            //     return "late";
-            // }

@@ -13,8 +13,9 @@ public class Player : MonoBehaviour
     //arrays
     public string[] components; //def value for no comps is 1
     public int[] buildsProgress; //3 can be saved
-    public int[] inboxMisc; //every email is in a list, if its 3 in here that means the email 3 will be shown
-    public int[] inboxOngoing; //every email is in a list, if its 3 in here that means the email 3 will be shown
+    public string[] potentialEmails; //every email
+    public string[] inboxMisc; //every email is in a list, if its 3 in here that means the email 3 will be shown
+    public string[] inboxOngoing; //every email is in a list, if its 3 in here that means the email 3 will be shown
     public string[] calendarDays; //every calendar day is an array entry
 
     //if this is start a bunch of functions in calendar break due to the arrays not being initialized
