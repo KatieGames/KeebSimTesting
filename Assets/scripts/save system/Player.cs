@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public int money;
     public int experience;
     public int currentDay;
+    public int currentEmail;
 
     //arrays
     public string[] components; //def value for no comps is 1
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
         money = data.money;
         experience = data.experience;
         currentDay = data.currentDay;
+        currentEmail = data.currentEmail;
 
         components = data.components;
         buildsProgress = data.buildsProgress;

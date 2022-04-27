@@ -15,6 +15,7 @@ public class PlayerData
     public int money;
     public int experience;
     public int currentDay;
+    public int currentEmail;
 
     //arrays
     public string[] components; //def value for no comps is 1
@@ -39,6 +40,7 @@ public class PlayerData
         money = player.money;
         experience = player.experience;
         currentDay = player.currentDay;
+        currentEmail = player.currentEmail;
         components = player.components;
         buildsProgress = player.buildsProgress;
         calendarDays = player.calendarDays;
