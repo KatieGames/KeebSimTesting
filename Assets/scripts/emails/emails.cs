@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 
-
 public class emails : MonoBehaviour
 {
     public GameObject player;
@@ -167,5 +166,26 @@ public class emails : MonoBehaviour
         ReadEmails();
     }
 
+    public void AcceptEmail()
+    {
+        Debug.Log("AcceptingEmail");
 
+        //syncs with playerData
+        Player playerData = player.GetComponent<Player>();
+        possibleEmails = playerData.potentialEmails;
+        miscEmails = playerData.inboxMisc;
+        ongoingEmails = playerData.inboxOngoing;
+
+        if(ongoingEmails.Contains(miscEmails[playerData.currentEmail]))
+        {
+            Debug.Log("Already exists");
+        }
+        else
+        {
+            List<string> tempList = ongoingEmails.ToList();
+            tempList.Add(miscEmails[playerData.currentEmail]);
+            ongoingEmails = tempList.ToArray();
+            playerData.inboxOngoing = ongoingEmails;
+        }
+    }
 }

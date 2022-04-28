@@ -32,6 +32,6 @@ public class emailButtons : MonoBehaviour
 
     public void AcceptEmail()
     {
-
+        email.AcceptEmail();
     }
 }
