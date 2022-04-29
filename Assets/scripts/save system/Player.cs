@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     //arrays
     public string[] components; //def value for no comps is 1
+    public string[] shopItems; //items in shop stored as encoded ints
     public int[] buildsProgress; //3 can be saved
     public string[] potentialEmails; //every email
     public string[] inboxMisc; //every email is in a list, if its 3 in here that means the email 3 will be shown
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
         currentEmail = data.currentEmail;
 
         components = data.components;
+        shopItems = data.shopItems;
         buildsProgress = data.buildsProgress;
         calendarDays = data.calendarDays;
         // inboxMisc = data.inboxMisc; //not yet implemented

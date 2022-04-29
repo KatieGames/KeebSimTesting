@@ -62,7 +62,7 @@ public static class Decoder
 
     public static string DecodeEmail(string entry, int part)
     {
-        //splitted aray of day strings
+        //splitted aray of email strings
         string[] splittedEmail = {"", "", "", "", ""};
 
         //splits into parts. Subject, sender, content, due date, cost
@@ -88,5 +88,25 @@ public static class Decoder
             return "tf is this";
         }
     }
+
+    public static string DecodeComponent(string entry, int part)
+    {
+        //splitted aray of component strings
+        string[] splittedComponent = {"", ""};
+
+        //splits into parts. Type, Item
+        splittedComponent = entry.Split('/');
+
+        if(part == 1)
+        {
+            return splittedComponent[0];
+        }
+        else if(part == 2){
+            return splittedComponent[1];
+        }
+        else{
+            return "tf is this";
+        }
+    }  
 }
 
