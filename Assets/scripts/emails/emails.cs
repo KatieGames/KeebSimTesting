@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.UI;
+
 
 public class emails : MonoBehaviour
 {
@@ -48,7 +50,10 @@ public class emails : MonoBehaviour
         {
             //generates random email
             int RandEmail = Random.Range(0, possibleEmails.Length);
-            miscEmails = miscEmails.Append(possibleEmails[RandEmail]).ToArray();
+            if(miscEmails.Contains(possibleEmails[RandEmail]) == false)
+            {
+                miscEmails = miscEmails.Append(possibleEmails[RandEmail]).ToArray();
+            }
             //miscEmails[EmailsAmnt += 1] = possibleEmails[RandEmail];
         }
 
@@ -74,6 +79,8 @@ public class emails : MonoBehaviour
             tButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(miscEmails[i], 1);
             //sets its buttonNumber int accordingly
             tButton.GetComponent<emailButtons>().buttonNumber = i;
+
+            DisplayEmail(0);
         }
     }
 
@@ -83,21 +90,36 @@ public class emails : MonoBehaviour
         GameObject subjectContent = GameObject.Find("SubjectContent");
         GameObject senderContent = GameObject.Find("SenderContent");
         GameObject bodyContent = GameObject.Find("BodyContent");
+        GameObject dueDate = GameObject.Find("DueContent");
+        GameObject cost = GameObject.Find("CostContent");
 
         Player playerData = GameObject.Find("GameManagement").GetComponent<Player>();
 
         string email = playerData.inboxMisc[buttonNumber];
 
-        //not yet implemented
-        //GameObject dueDate = GameObject.Find("DueContent");
-        //GameObject cost = GameObject.Find("CostContent");
         subjectContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 1);
         senderContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 2);
         bodyContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 3);
 
-        // subjectContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 1);
-        // subjectContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 1);
+        dueDate.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 4);
+        cost.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 5);
 
+        GameObject buttonPanelBlock = GameObject.Find("buttonPanelBlock");
+        GameObject acceptButtonBlock = GameObject.Find("acceptButtonBlock");
+
+        if(playerData.inboxOngoing.Contains(playerData.inboxMisc[buttonNumber]))
+        {
+            buttonPanelBlock.GetComponent<Image>().enabled = true;
+        }
+        else if(Decoder.DecodeEmail(email, 4) == "")
+        {
+            acceptButtonBlock.GetComponent<Image>().enabled = true;
+        }
+        else
+        {
+            buttonPanelBlock.GetComponent<Image>().enabled = false;
+            acceptButtonBlock.GetComponent<Image>().enabled = false;
+        }
     }
 
     public void DeleteEmail(int buttonNumber)
@@ -187,5 +209,7 @@ public class emails : MonoBehaviour
             ongoingEmails = tempList.ToArray();
             playerData.inboxOngoing = ongoingEmails;
         }
+
+        DisplayEmail(playerData.currentEmail);
     }
 }

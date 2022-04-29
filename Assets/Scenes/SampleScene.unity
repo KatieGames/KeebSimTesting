@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2573,7 +2573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 379.1, y: 0.171}
+  m_AnchoredPosition: {x: 370.18805, y: 0.171}
   m_SizeDelta: {x: 197.035, y: 74.225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530914237
@@ -4010,6 +4010,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790555805}
   m_CullTransparentMesh: 1
+--- !u!1 &794654244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794654245}
+  - component: {fileID: 794654247}
+  - component: {fileID: 794654246}
+  m_Layer: 0
+  m_Name: acceptButtonBlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &794654245
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794654244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1576139680}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 273.98, y: 0.431}
+  m_SizeDelta: {x: -966.636, y: -12.808}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &794654246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794654244}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.83921576, g: 0.83921576, b: 0.83921576, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ee5662d79c9220a4ba4a5e0eae75a0d2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &794654247
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794654244}
+  m_CullTransparentMesh: 1
 --- !u!1 &797482142
 GameObject:
   m_ObjectHideFlags: 0
@@ -4989,21 +5064,61 @@ MonoBehaviour:
   potentialEmails:
   - 'Congratulations!/Free Iphone/Congratulations sir,madam,miss,master,mr,mrs! You
     have won iphone free now for giveaway you have entered! Click this link immediatley
-    to claim the prize thats yours: (Bit.ly link to rick roll)'
+    to claim the prize thats yours: (Bit.ly link to rick roll)//'
   - We met at the bar last night ;)/Sammy/Hey there Tabitha! Thank you for kindly
     giving me this email to contact you - you were just so dazzling last night. Would
-    you like to arrange another meetup? Perhaps my house this time ;)
+    you like to arrange another meetup? Perhaps my house this time ;)//
   - "Business opportunity/Naomi Surugaba/Greetings, permit me of my desire to conduct
     business with you as partner. My father, king of wakanda, has put \xA314.53 trillion
     worth of cut uncut cut diamonds in the bank of uncut cut uncut diamonds and they
     have been seized for not correctly being cut. Please send me \xA33500 in $DOGE
     to 456789tyu3456780w9yu4 and we will be able to clear diamonds of bank and I
-    share half with you promise."
+    share half with you promise.//"
   - Please send help!/Maternal figure/Hello this is maternal figure. I have taken
     ill and need your help to find a cure. Doctors say that the only remedy is alien
-    artifacts.
+    artifacts.//
   - It is time/Unknown/Your time to realign with society has finished, and now it
-    is time to start your mission. A parcel will arrive within the next week.
+    is time to start your mission. A parcel will arrive within the next week.//
+  - '[money]/[error]/H3LLO MY [eFriend] 1 WANT T0 SUPPORT YOUR K3YB0ARD BU1LDING
+    [corporation]. ALL I NEED IS Y0UR [help] BY G1VING ME Y0UR [mothers credit card
+    number] AND TH3 [funny numbers] ON THE BACK. I HOPE T0 SEE YOUR R3PLY SO0N OTHERWISE
+    Y0U W1LL P4Y TH3 [consequences].//'
+  - "I need a baked beans keyboard BADLY!/John the Rice Man/reetings keyboard creator!
+    I'm looking for a custom baked bean keyboard, with a red and orange colour scheme
+    and some tactile black switches (I\u2019m a bit heavy handed :P). I'm a little
+    bit cautious about ordering these keyboards as the guy I contracted last time
+    burnt a hole through the PCB! (What a plonker!)/4.8.22/\xA3420"
+  - I know where you live/Max_Hacker_ || IHACKS.MAINFRAME ||/I know where I live,
+    I will find me and go to your house and beat me to death. I will leak all my
+    information, you will not survive. i wil ruins youre live you wil be scared and
+    crying 01101001 00100000 01110111 01101001 01101100 01101100 00100000 01101011
+    01101001 01101100 00100000 01111001 01101111 01110101 00100000 01101001 01100100
+    01101111 01110100 01101001 00100000 01110111 01101001 01101100 01101100 00100000
+    01101011 01101001 01101100 00100000 01111001 01101111 01110101 00100000 01101001
+    01100100 01101111 01110100 01101001 00100000 01110111 01101001 01101100 01101100
+    00100000 01101011 01101001 01101100 00100000 01111001 01101111 01110101 00100000
+    01101001 01100100 01101111 01110100 01101001 00100000 01110111 01101001 01101100
+    01101100 00100000 01101011 01101001 01101100 00100000 01111001 01101111 01110101
+    00100000 01101001 01100100 01101111 01110100 01101001 00100000 01110111 01101001
+    01101100 01101100 00100000 01101011 01101001 01101100 00100000 01111001 01101111
+    01110101 00100000 01101001 01100100 01101111 01110100 01101001 00100000 01110111
+    01101001 01101100 01101100 00100000 01101011 01101001 01101100 00100000 01111001
+    01101111 01110101 00100000 01101001 01100100 01101111 01110100 01101001 00100000
+    01110111 01101001 01101100 01101100 00100000 01101011 01101001 01101100 00100000
+    01111001 01101111 01110101 00100000 01101001 01100100 01101111 01110100 01101001
+    00100000 01110111 01101001 01101100 01101100 00100000 01101011 01101001 01101100
+    00100000 01111001 01101111 01110101 00100000 01101001 01100100 01101111 01110100
+    01101001 00100000 01110111 01101001 01101100 01101100 00100000 01101011 01101001
+    01101100 00100000 01111001 01101111 01110101 00100000 01101001 01100100 01101111
+    01110100 01101001 00100000 01110111 01101001 01101100 01101100 00100000 01101011
+    01101001 01101100 00100000 01111001 01101111 01110101 00100000 01101001 01100100
+    01101111 01110100 01101001 00100000 01110111 01101001 01101100 01101100 00100000
+    01101011 01101001 01101100 00100000 01111001 01101111 01110101 00100000 01101001
+    01100100 01101111 01110100 01101001 00100000 01110111 01101001 01101100 01101100
+    00100000 01101011 01101001 01101100 00100000 01111001 01101111 01110101 00100000
+    01101001 01100100 01101111 01110100//
+  - Hello!/Sgt Irene./Hello! Did you see my blessed deal message in your favor???
+    -Sgt Irene United States Armed Forces (USAF)//
   inboxMisc: []
   inboxOngoing: []
   calendarDays:
@@ -6244,6 +6359,81 @@ RectTransform:
   m_AnchoredPosition: {x: -6, y: 101}
   m_SizeDelta: {x: 51.527695, y: 51.527695}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1334424981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334424982}
+  - component: {fileID: 1334424984}
+  - component: {fileID: 1334424983}
+  m_Layer: 0
+  m_Name: buttonPanelBlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1334424982
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334424981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1576139680}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 466.4, y: 0.43099976}
+  m_SizeDelta: {x: -966.636, y: -12.808}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1334424983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334424981}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.83921576, g: 0.83921576, b: 0.83921576, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ee5662d79c9220a4ba4a5e0eae75a0d2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1334424984
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334424981}
+  m_CullTransparentMesh: 1
 --- !u!1 &1349696583
 GameObject:
   m_ObjectHideFlags: 0
@@ -8228,6 +8418,8 @@ RectTransform:
   m_Children:
   - {fileID: 1764970826}
   - {fileID: 530914236}
+  - {fileID: 1334424982}
+  - {fileID: 794654245}
   m_Father: {fileID: 1637187010}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8249,7 +8441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9081,7 +9273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 574, y: 0.171}
+  m_AnchoredPosition: {x: 565.0881, y: 0.171}
   m_SizeDelta: {x: 197.035, y: 74.225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1764970827
@@ -10001,7 +10193,7 @@ GameObject:
   - component: {fileID: 1928567057}
   - component: {fileID: 1928567056}
   m_Layer: 0
-  m_Name: dueAmount
+  m_Name: DueContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10135,7 +10327,7 @@ GameObject:
   - component: {fileID: 1930213745}
   - component: {fileID: 1930213744}
   m_Layer: 0
-  m_Name: moneyAmount
+  m_Name: CostContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
