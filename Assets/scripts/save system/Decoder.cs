@@ -95,7 +95,7 @@ public static class Decoder
         string[] splittedComponent = {"", ""};
 
         //splits into parts. Type, Item
-        splittedComponent = entry.Split('/');
+        splittedComponent = entry.Split('@');
 
         if(part == 1)
         {
@@ -107,6 +107,6 @@ public static class Decoder
         else{
             return "tf is this";
         }
-    }  
+    }
 }
 

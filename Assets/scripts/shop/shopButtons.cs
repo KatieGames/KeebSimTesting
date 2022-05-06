@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class shopButtons : MonoBehaviour
 {
+    public int buttonNumber;
+    public int currentEmail;
+    public GameObject shopComponent;
+    shop shop;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        shopComponent = GameObject.Find("Shop");
+        shop = shopComponent.GetComponent<shop>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DisplayItems(int type)
     {
-        
+        shop.LoadItems();
+        shop.CreateButtons(type);
+    }
+
+    public void BuyItem()
+    {
+        //shop.BuyItem();
     }
 }
