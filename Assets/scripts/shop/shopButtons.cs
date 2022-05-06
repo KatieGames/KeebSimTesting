@@ -5,7 +5,6 @@ using UnityEngine;
 public class shopButtons : MonoBehaviour
 {
     public int buttonNumber;
-    public int currentEmail;
     public GameObject shopComponent;
     shop shop;
 

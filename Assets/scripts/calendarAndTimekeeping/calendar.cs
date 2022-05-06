@@ -294,11 +294,6 @@ public class calendar : MonoBehaviour
                 //splitted aray of day strings
                 string[] splittedDay = {"", "", ""};
 
-                //temp strings for splitting
-                string dayPart1;
-                string dayPart2;
-                string dayPart3;
-
                 //sets the current selected day to a local variable
                 stringDay = calendarDays[i];
 

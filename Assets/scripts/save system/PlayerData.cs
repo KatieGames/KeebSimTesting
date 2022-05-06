@@ -16,11 +16,13 @@ public class PlayerData
     public int experience;
     public int currentDay;
     public int currentEmail;
+    public int type;
 
     //arrays
     public string[] components; //def value for no comps is 1
     public string[] shopItems; //items in shop stored as encoded ints
     public int[] buildsProgress; //3 can be saved
+    public string[] inventory; //inventory
     public string[] potentialEmails; //every email
     public string[] inboxMisc; //every email is in a list, if its 3 in here that means the email 3 will be shown
     public string[] inboxOngoing; //every email is in a list, if its 3 in here that means the email 3 will be shown
@@ -42,9 +44,11 @@ public class PlayerData
         experience = player.experience;
         currentDay = player.currentDay;
         currentEmail = player.currentEmail;
+        type = player.type;
         components = player.components;
         shopItems = player.shopItems;
         buildsProgress = player.buildsProgress;
+        inventory = player.inventory;
         calendarDays = player.calendarDays;
     }
 }

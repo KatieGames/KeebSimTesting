@@ -10,11 +10,13 @@ public class Player : MonoBehaviour
     public int experience;
     public int currentDay;
     public int currentEmail;
+    public int type;
 
     //arrays
     public string[] components; //def value for no comps is 1
     public string[] shopItems; //items in shop stored as encoded ints
     public int[] buildsProgress; //3 can be saved
+    public string[] inventory; //inventory
     public string[] potentialEmails; //every email
     public string[] inboxMisc; //every email is in a list, if its 3 in here that means the email 3 will be shown
     public string[] inboxOngoing; //every email is in a list, if its 3 in here that means the email 3 will be shown
@@ -40,10 +42,12 @@ public class Player : MonoBehaviour
         experience = data.experience;
         currentDay = data.currentDay;
         currentEmail = data.currentEmail;
+        type = data.type;
 
         components = data.components;
         shopItems = data.shopItems;
         buildsProgress = data.buildsProgress;
+        inventory = data.inventory;
         calendarDays = data.calendarDays;
         // inboxMisc = data.inboxMisc; //not yet implemented
         // inboxOngoing = data.inboxOngoing;
