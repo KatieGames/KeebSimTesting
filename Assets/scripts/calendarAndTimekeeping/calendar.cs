@@ -15,6 +15,11 @@ public class calendar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Calendar();
+    }
+
+    public void Calendar()
+    {
         //lets me use the playerData variable with ease
         Player playerData = player.GetComponent<Player>();
         //sets a local array to calendarDays for initial sync

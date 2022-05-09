@@ -22,6 +22,11 @@ public class Player : MonoBehaviour
     public string[] inboxOngoing; //every email is in a list, if its 3 in here that means the email 3 will be shown
     public string[] calendarDays; //every calendar day is an array entry
 
+    //game objects
+    public GameObject calendar;
+    public GameObject emails;
+
+
     //if this is start a bunch of functions in calendar break due to the arrays not being initialized
     // private void Awake() 
     // {
@@ -68,5 +73,25 @@ public class Player : MonoBehaviour
         //level calculation
         level = experience/1000;
         Debug.Log(level);
+    }
+
+    private void Start() 
+    {
+        LoadPlayer();
+        //syncs calendar
+        calendar.GetComponent<calendar>().Calendar();
+        SavePlayer();
+    }
+
+    public void TimeIncrease()
+    {
+        //progresses time
+        currentDay += 1;
+        //syncs calendar
+        calendar.GetComponent<calendar>().Calendar();
+        //generates emails
+        emails.GetComponent<emails>().GenerateEmails();
+        //saves
+        SavePlayer();
     }
 }

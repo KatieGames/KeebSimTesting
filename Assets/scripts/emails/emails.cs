@@ -26,7 +26,7 @@ public class emails : MonoBehaviour
         miscEmails = playerData.inboxMisc;
         ongoingEmails = playerData.inboxOngoing;
 
-        GenerateEmails();
+        //GenerateEmails();
         ReadEmails();
     }
 
@@ -36,7 +36,7 @@ public class emails : MonoBehaviour
         
     }
 
-    void GenerateEmails()
+    public void GenerateEmails()
     {
         Player playerData = player.GetComponent<Player>();
         miscEmails = playerData.inboxMisc;

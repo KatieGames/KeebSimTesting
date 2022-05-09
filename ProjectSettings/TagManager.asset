@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Moveable
   - SnapPoint
+  - Selection
+  - Computer
+  - Calendar
+  - Build1
+  - Build2
+  - Door
   layers:
   - Default
   - TransparentFX
