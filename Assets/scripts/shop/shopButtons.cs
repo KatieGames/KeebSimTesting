@@ -7,6 +7,7 @@ public class shopButtons : MonoBehaviour
     public int buttonNumber;
     public GameObject shopComponent;
     shop shop;
+    Player playerData;
 
 
     // Start is called before the first frame update
@@ -14,16 +15,22 @@ public class shopButtons : MonoBehaviour
     {
         shopComponent = GameObject.Find("Shop");
         shop = shopComponent.GetComponent<shop>();
+
+        GameObject gameManagement = GameObject.Find("GameManagement");
+        
+        playerData = gameManagement.GetComponent<Player>();
     }
 
     public void DisplayItems(int type)
     {
         shop.LoadItems();
         shop.CreateButtons(type);
+
+        playerData.type = type;
     }
 
     public void BuyItem()
     {
-        //shop.BuyItem();
+        shop.BuyItem(buttonNumber, playerData.type);
     }
 }

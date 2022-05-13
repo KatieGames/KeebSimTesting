@@ -12,9 +12,16 @@ public class playerLook : MonoBehaviour
     private bool temp = true;
     private bool holdingItem = false;
     private GameObject heldItem;
+    public GameObject camera;
+    MouseLook lookComponent;
+    private bool inUi;
 
     //selectables
     public GameObject computer, calendar, door, build1, build2;
+
+    private void Start() {
+        lookComponent = camera.GetComponent<MouseLook>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -81,28 +88,58 @@ public class playerLook : MonoBehaviour
                     if(hit.transform.tag == "Computer")
                     {
                         computer.SetActive(true);
+                        Cursor.lockState = CursorLockMode.None;
+                        lookComponent.enabled = false;
+                        inUi = true;
+
                     }
                     //opens the required ui
                     if(hit.transform.tag == "Calendar")
                     {
                         calendar.SetActive(true);
+                        Cursor.lockState = CursorLockMode.None;
+                        lookComponent.enabled = false;
                     }
                     //opens the required ui
                     if(hit.transform.tag == "Build1")
                     {
                         build1.SetActive(true);
+                        Cursor.lockState = CursorLockMode.None;
+                        lookComponent.enabled = false;
+                        inUi = true;
                     }
                     //opens the required ui
                     if(hit.transform.tag == "Build2")
                     {
                         build2.SetActive(true);
+                        Cursor.lockState = CursorLockMode.None;
+                        lookComponent.enabled = false;
+                        inUi = true;
                     }
                     //opens the required ui
                     if(hit.transform.tag == "Door")
                     {
                         door.SetActive(true);
+                        Cursor.lockState = CursorLockMode.None;
+                        lookComponent.enabled = false;
+                        inUi = true;
                     }
                 }
+            }
+        }
+
+        if(inUi)
+        {
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                computer.SetActive(false);
+                calendar.SetActive(false);
+                build1.SetActive(false);
+                //build2.SetActive(false);
+                //door.SetActive(false);
+
+                Cursor.lockState = CursorLockMode.Locked;
+                lookComponent.enabled = true;                                                              
             }
         }
 

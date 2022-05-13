@@ -27,6 +27,8 @@ public class shop : MonoBehaviour
     //from playerdata
     public string[] components;
     public string[] shopItems;
+    public string[] inventory;
+    public int balance;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,8 @@ public class shop : MonoBehaviour
         Player playerData = gameManagement.GetComponent<Player>();
         components = playerData.components;
         shopItems = playerData.shopItems;
+        balance = playerData.money;
+        inventory = playerData.inventory;
 
         LoadItems();
     }
@@ -230,5 +234,48 @@ public class shop : MonoBehaviour
 
         //calls load
         LoadItems();
+    }
+
+    public void BuyItem(int buttonNumber, int type)
+    {
+        string currentItem = "";
+        //works out the current item
+        if(type == 0)
+        {
+            currentItem = cases[buttonNumber];
+        }
+        else if(type == 1)
+        {
+            currentItem = plates[buttonNumber];
+        }
+        else if(type == 2)
+        {
+            currentItem = pcbs[buttonNumber];
+        }
+        else if(type == 3)
+        {
+            currentItem = switches[buttonNumber];
+        }
+        else if(type == 4)
+        {
+            currentItem = keycaps[buttonNumber];
+        }
+        else
+        {
+            Debug.Log("Null entry");
+        }
+
+        //subtracts money from balance
+        if((balance - int.Parse(Decoder.DecodeComponent(currentItem, 3))) >= 0)
+        {
+            balance -= int.Parse(Decoder.DecodeComponent(currentItem, 3));
+            //gives you the item into your inventory
+            Debug.Log(currentItem);
+            List<string> tempList = inventory.ToList();
+            tempList.Add(currentItem);
+            inventory = tempList.ToArray();
+            Player playerData = gameManagement.GetComponent<Player>();
+            playerData.inventory = inventory;
+        }
     }
 }

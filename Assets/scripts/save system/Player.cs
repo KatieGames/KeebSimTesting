@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class Player : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class Player : MonoBehaviour
     }
 
     public void LoadPlayer()
-    {
+    { 
         PlayerData data = SaveSystem.LoadPlayer();
 
         level = data.level;
@@ -49,13 +50,18 @@ public class Player : MonoBehaviour
         currentEmail = data.currentEmail;
         type = data.type;
 
-        components = data.components;
-        shopItems = data.shopItems;
+        // components = data.components;
+        // shopItems = data.shopItems;
         buildsProgress = data.buildsProgress;
         inventory = data.inventory;
         calendarDays = data.calendarDays;
         // inboxMisc = data.inboxMisc; //not yet implemented
         // inboxOngoing = data.inboxOngoing;
+
+        if (inventory == null || inventory.Length == 0)
+        {
+            inventory = new string[1];
+        }
     }
 
     public void SetMoney(int Tmoney)
@@ -77,10 +83,8 @@ public class Player : MonoBehaviour
 
     private void Start() 
     {
-        LoadPlayer();
-        //syncs calendar
-        calendar.GetComponent<calendar>().Calendar();
-        SavePlayer();
+        FirstLoad();
+        Sync();
     }
 
     public void TimeIncrease()
@@ -93,5 +97,26 @@ public class Player : MonoBehaviour
         emails.GetComponent<emails>().GenerateEmails();
         //saves
         SavePlayer();
+    }
+
+    void Sync()
+    {
+        LoadPlayer();
+        //syncs calendar
+        calendar.GetComponent<calendar>().Calendar();
+        SavePlayer();
+    }
+
+    void FirstLoad()
+    {
+        string path = Application.persistentDataPath + "/player.ezeSave";
+        if (File.Exists(path))
+        {
+            LoadPlayer();
+        }
+        else
+        {
+            SavePlayer();
+        }
     }
 }

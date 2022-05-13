@@ -92,7 +92,7 @@ public static class Decoder
     public static string DecodeComponent(string entry, int part)
     {
         //splitted aray of component strings
-        string[] splittedComponent = {"", ""};
+        string[] splittedComponent = {"", "", ""};
 
         //splits into parts. Type, Item
         splittedComponent = entry.Split('@');
@@ -103,6 +103,9 @@ public static class Decoder
         }
         else if(part == 2){
             return splittedComponent[1];
+        }
+        else if(part == 3){
+            return splittedComponent[2];
         }
         else{
             return "tf is this";

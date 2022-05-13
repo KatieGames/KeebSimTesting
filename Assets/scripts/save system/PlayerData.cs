@@ -19,8 +19,8 @@ public class PlayerData
     public int type;
 
     //arrays
-    public string[] components; //def value for no comps is 1
-    public string[] shopItems; //items in shop stored as encoded ints
+    // public string[] components; //def value for no comps is 1
+    // public string[] shopItems; //items in shop stored as encoded ints
     public int[] buildsProgress; //3 can be saved
     public string[] inventory; //inventory
     public string[] potentialEmails; //every email
@@ -45,8 +45,8 @@ public class PlayerData
         currentDay = player.currentDay;
         currentEmail = player.currentEmail;
         type = player.type;
-        components = player.components;
-        shopItems = player.shopItems;
+        // components = player.components;
+        // shopItems = player.shopItems;
         buildsProgress = player.buildsProgress;
         inventory = player.inventory;
         calendarDays = player.calendarDays;
