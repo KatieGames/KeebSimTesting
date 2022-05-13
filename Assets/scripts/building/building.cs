@@ -94,6 +94,8 @@ public class building : MonoBehaviour
     //parse in the type, if its cases it will instantiate the case ones etc, parse as number
     public void CreateButtons(int type)
     {
+        Player playerData = gameManagement.GetComponent<Player>();
+        inventory = playerData.inventory;
         //clears buttons
         ResetButtons();
 
@@ -240,6 +242,7 @@ public class building : MonoBehaviour
 
     public void PlaceComponent(int buttonNum, int type)
     {
+        LoadItems();
 
         if(type == 0)
         {
