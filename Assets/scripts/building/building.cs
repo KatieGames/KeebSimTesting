@@ -255,19 +255,19 @@ public class building : MonoBehaviour
         }
         if(type == 1)
         {
-            string component = pcbs[buttonNum];
+            string component = plates[buttonNum];
             GameObject tObject;
-            tObject = Instantiate(Resources.Load(component), pcbsPoint.transform.position, pcbsPoint.transform.rotation) as GameObject;
-            tObject.transform.SetParent(pcbsPoint.transform);
+            tObject = Instantiate(Resources.Load(component), platesPoint.transform.position, platesPoint.transform.rotation) as GameObject;
+            tObject.transform.SetParent(platesPoint.transform);
             // tObject.transform.TransformPoint(0f,0f,0f);
             // tObject.transform.position = new Vector3(0f,0f,0f);            
         }
         if(type == 2)
         {
-            string component = plates[buttonNum];
+            string component = pcbs[buttonNum];
             GameObject tObject;
-            tObject = Instantiate(Resources.Load(component), platesPoint.transform.position, platesPoint.transform.rotation) as GameObject;
-            tObject.transform.SetParent(platesPoint.transform);
+            tObject = Instantiate(Resources.Load(component), pcbsPoint.transform.position, pcbsPoint.transform.rotation) as GameObject;
+            tObject.transform.SetParent(pcbsPoint.transform);
             // tObject.transform.TransformPoint(0f,0f,0f);
             // tObject.transform.position = new Vector3(0f,0f,0f);            
         }
@@ -291,5 +291,14 @@ public class building : MonoBehaviour
         }
 
         camera.SetActive(true);
+    }
+
+    void UseItem(string value)
+    {
+        Player playerData = gameManagement.GetComponent<Player>();
+        List<string> tempList = inventory.ToList();
+        tempList.Remove(value);
+        inventory = tempList.ToArray();
+        playerData.inventory = inventory;
     }
 }
