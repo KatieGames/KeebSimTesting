@@ -1361,7 +1361,7 @@ RectTransform:
   m_GameObject: {fileID: 158327429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.47, y: 1.47, z: 1.47}
   m_Children:
   - {fileID: 866213664}
   m_Father: {fileID: 1202202721}
@@ -1369,7 +1369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -30, y: 2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &166128084
@@ -4651,7 +4651,6 @@ MonoBehaviour:
   platesPoint: {fileID: 1509147012}
   switchesPoint: {fileID: 318480782}
   keycapsPoint: {fileID: 1197082014}
-  camera: {fileID: 964922472}
 --- !u!1 &640497580
 GameObject:
   m_ObjectHideFlags: 0
@@ -6297,6 +6296,8 @@ MonoBehaviour:
     m_Bits: 64
   itemSnap: {fileID: 1127442801}
   camera: {fileID: 412945608}
+  buildCamera: {fileID: 964922472}
+  playerModel: {fileID: 1502740416}
   computer: {fileID: 206922854}
   calendar: {fileID: 158327429}
   door: {fileID: 0}
@@ -6999,7 +7000,7 @@ GameObject:
   - component: {fileID: 964922473}
   - component: {fileID: 964922475}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: BuildCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

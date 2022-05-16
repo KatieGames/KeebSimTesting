@@ -13,6 +13,8 @@ public class playerLook : MonoBehaviour
     private bool holdingItem = false;
     private GameObject heldItem;
     public GameObject camera;
+    public GameObject buildCamera;
+    public GameObject playerModel;
     MouseLook lookComponent;
     private bool inUi;
 
@@ -90,6 +92,8 @@ public class playerLook : MonoBehaviour
                         computer.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
                         lookComponent.enabled = false;
+                        playerModel.GetComponent<MeshRenderer>().enabled = false;
+                        playerModel.GetComponent<PlayerController>().enabled = false;
                         inUi = true;
 
                     }
@@ -99,6 +103,9 @@ public class playerLook : MonoBehaviour
                         calendar.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
                         lookComponent.enabled = false;
+                        playerModel.GetComponent<MeshRenderer>().enabled = false;
+                        playerModel.GetComponent<PlayerController>().enabled = false;
+                        inUi = true;
                     }
                     //opens the required ui
                     if(hit.transform.tag == "Build1")
@@ -106,7 +113,10 @@ public class playerLook : MonoBehaviour
                         build1.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
                         lookComponent.enabled = false;
+                        playerModel.GetComponent<MeshRenderer>().enabled = false;
+                        playerModel.GetComponent<PlayerController>().enabled = false;
                         inUi = true;
+                        buildCamera.SetActive(true);
                     }
                     //opens the required ui
                     if(hit.transform.tag == "Build2")
@@ -114,6 +124,8 @@ public class playerLook : MonoBehaviour
                         build2.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
                         lookComponent.enabled = false;
+                        playerModel.GetComponent<MeshRenderer>().enabled = false;
+                        playerModel.GetComponent<PlayerController>().enabled = false;
                         inUi = true;
                     }
                     //opens the required ui
@@ -122,6 +134,8 @@ public class playerLook : MonoBehaviour
                         door.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
                         lookComponent.enabled = false;
+                        playerModel.GetComponent<MeshRenderer>().enabled = false;
+                        playerModel.GetComponent<PlayerController>().enabled = false;
                         inUi = true;
                     }
                 }
@@ -137,8 +151,11 @@ public class playerLook : MonoBehaviour
                 build1.SetActive(false);
                 //build2.SetActive(false);
                 //door.SetActive(false);
+                buildCamera.SetActive(false);
 
                 Cursor.lockState = CursorLockMode.Locked;
+                playerModel.GetComponent<MeshRenderer>().enabled = true;
+                playerModel.GetComponent<PlayerController>().enabled = true;
                 lookComponent.enabled = true;                                                              
             }
         }

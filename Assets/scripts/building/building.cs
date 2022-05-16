@@ -38,7 +38,6 @@ public class building : MonoBehaviour
     public GameObject switchesPoint;
     public GameObject keycapsPoint;
 
-    public GameObject camera;
 
     // Start is called before the first frame update
     void Start()
@@ -326,24 +325,8 @@ public class building : MonoBehaviour
         }
         Player playerData = gameManagement.GetComponent<Player>();
         playerData.buildsProgress[0] = tString;
-
-        camera.SetActive(true);
     }
 
-    void SubmitBuild()
-    {
-        Player playerData = gameManagement.GetComponent<Player>();
-        string[] components = Decoder.DecodeBuild(playerData.buildsProgress[0]);
-        foreach(string component in components)
-        {
-            UseItem(component);
-        }
-
-        List<string> tempList = playerData.inventory.ToList();
-        tempList.Clear();
-        playerData.buildsProgress = tempList.ToArray();
-
-    }
 
     void UseItem(string value)
     {

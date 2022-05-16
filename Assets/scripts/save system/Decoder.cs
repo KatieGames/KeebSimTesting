@@ -133,7 +133,15 @@ public static class Decoder
     {
         string[] splittedBuild = {"", "", "", "", ""};
 
-        splittedBuild = entry.Split('#');
+        if(entry != null)
+        {
+            splittedBuild = entry.Split('#');
+        }
+
+        else
+        {
+            return splittedBuild;
+        }
 
         return splittedBuild;
     }

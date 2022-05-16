@@ -30,6 +30,7 @@ public class emails : MonoBehaviour
 
         GenerateEmails();
         ReadEmails();
+        playerData.SavePlayer();
     }
 
     // Update is called once per frame
