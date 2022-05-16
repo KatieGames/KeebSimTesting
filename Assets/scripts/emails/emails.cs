@@ -14,6 +14,7 @@ public class emails : MonoBehaviour
     private string[] ongoingEmails; //all accepted job emails
     public GameObject buttonsList; //gameobject contianing buttons
     public GameObject buttonPrefab; //button prefab for email ui
+    public GameObject submitButton;
 
 
 
@@ -21,6 +22,7 @@ public class emails : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        submitButton = GameObject.Find("SubmitButton");
         Player playerData = player.GetComponent<Player>();
         possibleEmails = playerData.potentialEmails;
         miscEmails = playerData.inboxMisc;
@@ -84,7 +86,7 @@ public class emails : MonoBehaviour
         }
     }
 
-    public static void DisplayEmail(int buttonNumber)
+    public void DisplayEmail(int buttonNumber)
     {
         //for the email content section
         GameObject subjectContent = GameObject.Find("SubjectContent");
@@ -110,15 +112,20 @@ public class emails : MonoBehaviour
         if(playerData.inboxOngoing.Contains(playerData.inboxMisc[buttonNumber]))
         {
             buttonPanelBlock.GetComponent<Image>().enabled = true;
+            acceptButtonBlock.GetComponent<Image>().enabled = false; 
+            submitButton.SetActive(true);
         }
         else if(Decoder.DecodeEmail(email, 4) == "")
         {
             acceptButtonBlock.GetComponent<Image>().enabled = true;
+            buttonPanelBlock.GetComponent<Image>().enabled = false;
+            submitButton.SetActive(false);
         }
         else
         {
             buttonPanelBlock.GetComponent<Image>().enabled = false;
             acceptButtonBlock.GetComponent<Image>().enabled = false;
+            submitButton.SetActive(false);
         }
     }
 

@@ -49,13 +49,16 @@ public static class Decoder
         {
             return decodedDay[0];
         }
-        else if(bit == 2){
+        else if(bit == 2)
+        {
             return decodedDay[1];
         }
-        else if(bit == 3){
+        else if(bit == 3)
+        {
             return decodedDay[2];
         }
-        else{
+        else
+        {
             return "tf is this";
         }
     }
@@ -72,19 +75,24 @@ public static class Decoder
         {
             return splittedEmail[0];
         }
-        else if(part == 2){
+        else if(part == 2)
+        {
             return splittedEmail[1];
         }
-        else if(part == 3){
+        else if(part == 3)
+        {
             return splittedEmail[2];
         }
-        else if(part == 4){
+        else if(part == 4)
+        {
             return splittedEmail[3];
         }
-        else if(part == 5){
+        else if(part == 5)
+        {
             return splittedEmail[4];
         }
-        else{
+        else
+        {
             return "tf is this";
         }
     }
@@ -102,19 +110,32 @@ public static class Decoder
             {
                 return splittedComponent[0];
             }
-            else if(part == 2){
+            else if(part == 2)
+            {
                 return splittedComponent[1];
             }
-            else if(part == 3){
+            else if(part == 3)
+            {
                 return splittedComponent[2];
             }
-            else{
+            else
+            {
                 return "tf is this";
             }
         }
-        else{
+        else
+        {
             return "tf is this";
         }
+    }
+
+    public static string[] DecodeBuild(string entry)
+    {
+        string[] splittedBuild = {"", "", "", "", ""};
+
+        splittedBuild = entry.Split('#');
+
+        return splittedBuild;
     }
 }
 

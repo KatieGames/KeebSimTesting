@@ -23,10 +23,13 @@ public class building : MonoBehaviour
     public string[] pcbs;
     public string[] switches;
     public string[] keycaps;
+    public string[] currentBuild = {"", "", "", "", ""};
+
 
     //from playerdata
     public string[] components;
     public string[] inventory;
+    
 
     //build part locations
     public GameObject casesPoint;
@@ -248,6 +251,11 @@ public class building : MonoBehaviour
         {
             string component = cases[buttonNum];
             GameObject tObject;
+            currentBuild[0] = component;
+            foreach(Transform child in casesPoint.transform)
+            {
+                Destroy(child.gameObject);                                 
+            } 
             tObject = Instantiate(Resources.Load(component), casesPoint.transform.position, casesPoint.transform.rotation) as GameObject;
             tObject.transform.SetParent(casesPoint.transform);
             // tObject.transform.TransformPoint(0f,0f,0f);
@@ -257,6 +265,11 @@ public class building : MonoBehaviour
         {
             string component = plates[buttonNum];
             GameObject tObject;
+            currentBuild[1] = component;
+            foreach(Transform child in platesPoint.transform)
+            {
+                Destroy(child.gameObject);                                 
+            } 
             tObject = Instantiate(Resources.Load(component), platesPoint.transform.position, platesPoint.transform.rotation) as GameObject;
             tObject.transform.SetParent(platesPoint.transform);
             // tObject.transform.TransformPoint(0f,0f,0f);
@@ -266,6 +279,11 @@ public class building : MonoBehaviour
         {
             string component = pcbs[buttonNum];
             GameObject tObject;
+            currentBuild[2] = component;
+            foreach(Transform child in pcbsPoint.transform)
+            {
+                Destroy(child.gameObject);                                 
+            }             
             tObject = Instantiate(Resources.Load(component), pcbsPoint.transform.position, pcbsPoint.transform.rotation) as GameObject;
             tObject.transform.SetParent(pcbsPoint.transform);
             // tObject.transform.TransformPoint(0f,0f,0f);
@@ -275,6 +293,11 @@ public class building : MonoBehaviour
         {
             string component = switches[buttonNum];
             GameObject tObject;
+            currentBuild[3] = component;
+            foreach(Transform child in switchesPoint.transform)
+            {
+                Destroy(child.gameObject);                                 
+            }           
             tObject = Instantiate(Resources.Load(component), switchesPoint.transform.position, switchesPoint.transform.rotation) as GameObject;
             tObject.transform.SetParent(switchesPoint.transform);
             // tObject.transform.TransformPoint(0f,0f,0f);
@@ -284,19 +307,48 @@ public class building : MonoBehaviour
         {
             string component = keycaps[buttonNum];
             GameObject tObject;
+            currentBuild[4] = component;
+            foreach(Transform child in keycapsPoint.transform)
+            {
+                Destroy(child.gameObject);                                 
+            }
             tObject = Instantiate(Resources.Load(component), keycapsPoint.transform.position, keycapsPoint.transform.rotation) as GameObject;
             tObject.transform.SetParent(keycapsPoint.transform);
             // tObject.transform.TransformPoint(0f,0f,0f);
             // tObject.transform.position = new Vector3(0f,0f,0f);            
         }
 
+        string tString = "";
+        foreach(string component in currentBuild)
+        {
+            tString += component;
+            tString += '#';
+        }
+        Player playerData = gameManagement.GetComponent<Player>();
+        playerData.buildsProgress[0] = tString;
+
         camera.SetActive(true);
+    }
+
+    void SubmitBuild()
+    {
+        Player playerData = gameManagement.GetComponent<Player>();
+        string[] components = Decoder.DecodeBuild(playerData.buildsProgress[0]);
+        foreach(string component in components)
+        {
+            UseItem(component);
+        }
+
+        List<string> tempList = playerData.inventory.ToList();
+        tempList.Clear();
+        playerData.buildsProgress = tempList.ToArray();
+
     }
 
     void UseItem(string value)
     {
         Player playerData = gameManagement.GetComponent<Player>();
-        List<string> tempList = inventory.ToList();
+        List<string> tempList = playerData.inventory.ToList();
         tempList.Remove(value);
         inventory = tempList.ToArray();
         playerData.inventory = inventory;

@@ -21,7 +21,7 @@ public class PlayerData
     //arrays
     // public string[] components; //def value for no comps is 1
     // public string[] shopItems; //items in shop stored as encoded ints
-    public int[] buildsProgress; //3 can be saved
+    public string[] buildsProgress; //3 can be saved
     public string[] inventory; //inventory
     public string[] potentialEmails; //every email
     public string[] inboxMisc; //every email is in a list, if its 3 in here that means the email 3 will be shown
@@ -50,5 +50,7 @@ public class PlayerData
         buildsProgress = player.buildsProgress;
         inventory = player.inventory;
         calendarDays = player.calendarDays;
+        inboxOngoing = player.inboxOngoing;
+        inboxMisc = player.inboxMisc;
     }
 }
