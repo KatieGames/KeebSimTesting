@@ -150,7 +150,7 @@ public class playerLook : MonoBehaviour
                 calendar.SetActive(false);
                 build1.SetActive(false);
                 //build2.SetActive(false);
-                //door.SetActive(false);
+                door.SetActive(false);
                 buildCamera.SetActive(false);
 
                 Cursor.lockState = CursorLockMode.Locked;

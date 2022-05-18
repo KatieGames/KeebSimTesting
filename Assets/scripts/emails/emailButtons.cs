@@ -96,8 +96,11 @@ public class emailButtons : MonoBehaviour
                 Destroy(child.gameObject);                                 
             }
 
+            email.DeleteEmail(currentEmail);
+
             //pays the player
-            string pay = Decoder.DecodeEmail(playerData.inboxMisc[buttonNumber],4);
+            string pay = Decoder.DecodeEmail(playerData.inboxMisc[playerData.currentEmail],5);
+            pay = pay.Remove(0,1);
             playerData.money += int.Parse(pay);
             playerData.SavePlayer();
         }

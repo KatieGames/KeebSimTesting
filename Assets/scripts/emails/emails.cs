@@ -30,6 +30,7 @@ public class emails : MonoBehaviour
 
         GenerateEmails();
         ReadEmails();
+        Debug.Log("sadad");
         playerData.SavePlayer();
     }
 
@@ -41,7 +42,9 @@ public class emails : MonoBehaviour
 
     public void GenerateEmails()
     {
+        Debug.Log("genning mail");
         Player playerData = player.GetComponent<Player>();
+        possibleEmails = playerData.potentialEmails;
         miscEmails = playerData.inboxMisc;
 
         //gets a random email
@@ -61,10 +64,13 @@ public class emails : MonoBehaviour
         }
 
         playerData.inboxMisc = miscEmails;
+        playerData.SavePlayer();
+        UpdateEmails();
     }
 
     void ReadEmails()
     {
+        ResetButtons();
         Player playerData = player.GetComponent<Player>();
 
         int EmailsAmnt = playerData.inboxMisc.Length;
@@ -82,8 +88,6 @@ public class emails : MonoBehaviour
             tButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(miscEmails[i], 1);
             //sets its buttonNumber int accordingly
             tButton.GetComponent<emailButtons>().buttonNumber = i;
-
-            DisplayEmail(0);
         }
     }
 
@@ -153,6 +157,7 @@ public class emails : MonoBehaviour
         // subjectContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 1);
 
         UpdateEmails();
+        DisplayEmail(0);
 
     }
     
@@ -184,7 +189,7 @@ public class emails : MonoBehaviour
         playerData.inboxMisc = tempEmails;
         miscEmails = playerData.inboxMisc;
 
-        ResetButtons();
+        ReadEmails();
     }
 
     void ResetButtons()
@@ -193,7 +198,6 @@ public class emails : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        ReadEmails();
     }
 
     public void AcceptEmail()

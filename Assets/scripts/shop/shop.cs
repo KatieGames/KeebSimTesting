@@ -41,6 +41,7 @@ public class shop : MonoBehaviour
         inventory = playerData.inventory;
 
         LoadItems();
+        UpdateBalance();
     }
 
     // Update is called once per frame
@@ -276,6 +277,15 @@ public class shop : MonoBehaviour
             inventory = tempList.ToArray();
             Player playerData = gameManagement.GetComponent<Player>();
             playerData.inventory = inventory;
+            playerData.money = balance;
         }
+
+        UpdateBalance();
+    }
+
+    void UpdateBalance()
+    {
+        Player playerData = gameManagement.GetComponent<Player>();
+        GameObject.Find("Balance").GetComponent<TMPro.TextMeshProUGUI>().text = playerData.money.ToString();
     }
 }
