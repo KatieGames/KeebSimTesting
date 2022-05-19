@@ -96,13 +96,34 @@ public class emailButtons : MonoBehaviour
                 Destroy(child.gameObject);                                 
             }
 
-            email.DeleteEmail(currentEmail);
-
             //pays the player
             string pay = Decoder.DecodeEmail(playerData.inboxMisc[playerData.currentEmail],5);
             pay = pay.Remove(0,1);
             playerData.money += int.Parse(pay);
             playerData.SavePlayer();
+
+            int len = playerData.inboxOngoing.Length;
+
+            for(int i = 0; i < len; i++){
+                Debug.Log(i);
+                if(playerData.inboxMisc == null || playerData.inboxMisc.Length == 0)
+                {
+                    {
+                        List<string> teList = playerData.inboxOngoing.ToList();
+                        playerData.inboxOngoing[i] = "";
+                        playerData.inboxOngoing = teList.ToArray();
+                    }
+                }
+                else if(playerData.inboxOngoing[i] == playerData.inboxMisc[buttonNumber])
+                {
+                    {
+                        playerData.inboxOngoing[i] = "";
+                    }
+                }
+            }
+
+            playerData.SavePlayer();
+            email.DeleteEmail(currentEmail);
         }
     }
 }

@@ -30,7 +30,6 @@ public class emails : MonoBehaviour
 
         GenerateEmails();
         ReadEmails();
-        Debug.Log("sadad");
         playerData.SavePlayer();
     }
 
@@ -157,8 +156,7 @@ public class emails : MonoBehaviour
         // subjectContent.GetComponent<TMPro.TextMeshProUGUI>().text = Decoder.DecodeEmail(email, 1);
 
         UpdateEmails();
-        DisplayEmail(0);
-
+        playerData.SavePlayer();
     }
     
     void UpdateEmails()
@@ -168,7 +166,7 @@ public class emails : MonoBehaviour
         miscEmails = playerData.inboxMisc;
         ongoingEmails = playerData.inboxOngoing;
 
-        string[] tempEmails = new string[] {};
+        string[] tempEmails = {};
 
         int EmailsAmnt = miscEmails.Length;
 
@@ -221,6 +219,7 @@ public class emails : MonoBehaviour
             ongoingEmails = tempList.ToArray();
             playerData.inboxOngoing = ongoingEmails;
         }
+        playerData.SavePlayer();
 
         DisplayEmail(playerData.currentEmail);
     }

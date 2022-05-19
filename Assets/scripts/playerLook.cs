@@ -19,7 +19,7 @@ public class playerLook : MonoBehaviour
     private bool inUi;
 
     //selectables
-    public GameObject computer, calendar, door, build1, build2;
+    public GameObject computer, calendar, door, build1, build2, pause;
 
     private void Start() {
         lookComponent = camera.GetComponent<MouseLook>();
@@ -157,6 +157,23 @@ public class playerLook : MonoBehaviour
                 playerModel.GetComponent<MeshRenderer>().enabled = true;
                 playerModel.GetComponent<PlayerController>().enabled = true;
                 lookComponent.enabled = true;                                                              
+            }
+        }
+        if(!inUi){
+            bool paused = false;
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseMenu menu = pause.GetComponent<PauseMenu>();
+                if(paused)
+                {
+                    pause.SetActive(false);
+                    menu.Resume();
+                }
+                else
+                {
+                    pause.SetActive(true);
+                    menu.Pause();
+                }
             }
         }
 

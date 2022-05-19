@@ -202,7 +202,7 @@ public class shop : MonoBehaviour
     string GenerateText(string entry)
     {
         //splitted aray of component strings
-        string[] splittedComponent = {"", ""};
+        string[] splittedComponent = {"", "", ""};
 
         //splits into parts. Type, Item
         splittedComponent = entry.Split('@');
@@ -210,8 +210,12 @@ public class shop : MonoBehaviour
         //sets it to an int
         int itemIndex = int.Parse(splittedComponent[1]);
 
+        string tResult = components[itemIndex];
+
+        string result = tResult + " £" + splittedComponent[2];
+
         //returns item name from components array
-        return components[itemIndex];
+        return result;
     }
 
     void ResetButtons()
@@ -278,6 +282,7 @@ public class shop : MonoBehaviour
             Player playerData = gameManagement.GetComponent<Player>();
             playerData.inventory = inventory;
             playerData.money = balance;
+            playerData.SavePlayer();
         }
 
         UpdateBalance();
@@ -287,5 +292,6 @@ public class shop : MonoBehaviour
     {
         Player playerData = gameManagement.GetComponent<Player>();
         GameObject.Find("Balance").GetComponent<TMPro.TextMeshProUGUI>().text = playerData.money.ToString();
+        playerData.SavePlayer();
     }
 }

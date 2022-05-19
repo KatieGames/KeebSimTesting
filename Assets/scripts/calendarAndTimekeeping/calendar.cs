@@ -37,7 +37,7 @@ public class calendar : MonoBehaviour
     void CheckToday()
     {
         if(calendarDays[currentDay] != "")
-        {
+        { 
             Debug.Log("Entry found for today");
 
             //counter for what character the divider starts at
