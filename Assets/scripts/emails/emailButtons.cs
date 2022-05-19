@@ -45,7 +45,8 @@ public class emailButtons : MonoBehaviour
         Player playerData = player.GetComponent<Player>();
         string[] components = Decoder.DecodeBuild(playerData.buildsProgress[0]);
 
-        if(playerData.buildsProgress[0] == "01@03@69#02@01@24#03@02@35#04@00@57#05@04@12#"){
+        if(playerData.buildsProgress[0] == "01@03@76#02@01@38#03@02@62#04@00@57#05@04@43#"){
+            Debug.Log("c");
             foreach(string value in components)
             {
                 List<string> tlist = playerData.inventory.ToList();
@@ -104,21 +105,20 @@ public class emailButtons : MonoBehaviour
 
             int len = playerData.inboxOngoing.Length;
 
-            for(int i = 0; i < len; i++){
+            for(int i = 0; i < len; i++)
+            {
                 Debug.Log(i);
                 if(playerData.inboxMisc == null || playerData.inboxMisc.Length == 0)
                 {
-                    {
-                        List<string> teList = playerData.inboxOngoing.ToList();
-                        playerData.inboxOngoing[i] = "";
-                        playerData.inboxOngoing = teList.ToArray();
-                    }
+                    Debug.Log("a");
+                    List<string> teList = playerData.inboxOngoing.ToList();
+                    playerData.inboxOngoing[i] = "";
+                    playerData.inboxOngoing = teList.ToArray();
                 }
                 else if(playerData.inboxOngoing[i] == playerData.inboxMisc[buttonNumber])
                 {
-                    {
-                        playerData.inboxOngoing[i] = "";
-                    }
+                    Debug.Log("b");
+                    playerData.inboxOngoing[i] = "";
                 }
             }
 

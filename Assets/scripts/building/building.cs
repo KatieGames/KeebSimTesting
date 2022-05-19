@@ -48,6 +48,7 @@ public class building : MonoBehaviour
         inventory = playerData.inventory;
 
         LoadItems();
+        LoadPreviousBuild();
     }
 
     // Update is called once per frame
@@ -240,6 +241,47 @@ public class building : MonoBehaviour
 
         //calls load
         LoadItems();
+    }
+
+    void LoadPreviousBuild()
+    {
+        Player playerData = gameManagement.GetComponent<Player>();
+        string[] components = {"", "", "", "", ""};
+        components = Decoder.DecodeBuild(playerData.buildsProgress);
+
+
+
+        int len = playerData.inboxOngoing.Length;
+
+        for(int i = 0; i < len; i++)
+        {
+            Debug.Log(i);
+            if(playerData.inboxMisc == null || playerData.inboxMisc.Length == 0)
+            {
+                Debug.Log("a");
+                List<string> teList = playerData.inboxOngoing.ToList();
+                playerData.inboxOngoing[i] = "";
+                playerData.inboxOngoing = teList.ToArray();
+            }
+            else if(playerData.inboxOngoing[i] == playerData.inboxMisc[buttonNumber])
+            {
+                Debug.Log("b");
+                playerData.inboxOngoing[i] = "";
+            }
+        }
+
+
+
+
+
+
+        foreach(String entry in components)
+        {
+            GameObject tObject;
+            tObject = Instantiate(Resources.Load(entry), casesPoint.transform.position, casesPoint.transform.rotation) as GameObject;
+            tObject.transform.SetParent(casesPoint.transform);
+        }
+
     }
 
     public void PlaceComponent(int buttonNum, int type)

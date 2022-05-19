@@ -17,6 +17,7 @@ public class playerLook : MonoBehaviour
     public GameObject playerModel;
     MouseLook lookComponent;
     private bool inUi;
+    private bool paused = false;
 
     //selectables
     public GameObject computer, calendar, door, build1, build2, pause;
@@ -141,7 +142,22 @@ public class playerLook : MonoBehaviour
                 }
             }
         }
-
+        if(!inUi){
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseMenu menu = pause.GetComponent<PauseMenu>();
+                if(paused)
+                {
+                    pause.SetActive(false);
+                    menu.Resume();
+                }
+                else
+                {
+                    pause.SetActive(true);
+                    menu.Pause();
+                }
+            }
+        }
         if(inUi)
         {
             if(Input.GetKeyDown(KeyCode.Escape))
@@ -156,24 +172,8 @@ public class playerLook : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 playerModel.GetComponent<MeshRenderer>().enabled = true;
                 playerModel.GetComponent<PlayerController>().enabled = true;
-                lookComponent.enabled = true;                                                              
-            }
-        }
-        if(!inUi){
-            bool paused = false;
-            if(Input.GetKeyDown(KeyCode.Escape))
-            {
-                PauseMenu menu = pause.GetComponent<PauseMenu>();
-                if(paused)
-                {
-                    pause.SetActive(false);
-                    menu.Resume();
-                }
-                else
-                {
-                    pause.SetActive(true);
-                    menu.Pause();
-                }
+                lookComponent.enabled = true;      
+                inUi = false;                                                        
             }
         }
 
