@@ -271,6 +271,7 @@ public class shop : MonoBehaviour
         }
 
         //subtracts money from balance
+        UpdateBalance();
         if((balance - int.Parse(Decoder.DecodeComponent(currentItem, 3))) >= 0)
         {
             balance -= int.Parse(Decoder.DecodeComponent(currentItem, 3));

@@ -16,7 +16,7 @@ public class playerLook : MonoBehaviour
     public GameObject buildCamera;
     public GameObject playerModel;
     MouseLook lookComponent;
-    private bool inUi;
+    public bool inUi;
     private bool paused = false;
 
     //selectables

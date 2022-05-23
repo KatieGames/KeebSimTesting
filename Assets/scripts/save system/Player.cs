@@ -27,12 +27,17 @@ public class Player : MonoBehaviour
     public GameObject calendar;
     public GameObject emails;
 
+    MouseLook lookComponent;
+    public GameObject camera;
+    public GameObject playerModel;
+
 
     //if this is start a bunch of functions in calendar break due to the arrays not being initialized
     // private void Awake() 
     // {
     //     calendarDays = new string[31];
     // }
+
 
     public void SavePlayer()
     {
@@ -85,6 +90,7 @@ public class Player : MonoBehaviour
     {
         FirstLoad();
         Sync();
+        //lookComponent = camera.GetComponent<MouseLook>();
     }
 
     public void TimeIncrease()
@@ -95,6 +101,16 @@ public class Player : MonoBehaviour
         calendar.GetComponent<calendar>().Calendar();
         //generates emails
         emails.GetComponent<emails>().GenerateEmails();
+
+
+
+        //fixes issue of being stuck in ui
+        Cursor.lockState = CursorLockMode.Locked;
+        playerModel.GetComponent<MeshRenderer>().enabled = true;
+        playerModel.GetComponent<PlayerController>().enabled = true;
+        //lookComponent.enabled = true;      
+
+
         //saves
         SavePlayer();
     }

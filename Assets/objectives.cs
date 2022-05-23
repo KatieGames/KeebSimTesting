@@ -18,7 +18,7 @@ public class objectives : MonoBehaviour
     void Update()
     {
         SetHealth(playerData.money);
-        if(playerData.money >= 10000){
+        if(playerData.money >= 3000){
             congrats.SetActive(true);
         }
     }
