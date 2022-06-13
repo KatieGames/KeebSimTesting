@@ -178,7 +178,7 @@ public class playerLook : MonoBehaviour
                 Cursor.visible = false;
                 playerModel.GetComponent<MeshRenderer>().enabled = true;
                 playerModel.GetComponent<PlayerController>().enabled = true;
-                lookComponent.enabled = true;      
+                lookComponent.enabled = true;
                 inUi = false;                                                        
             }
         }
@@ -193,5 +193,21 @@ public class playerLook : MonoBehaviour
     //reset the debug colour
     void ColourReset(){
         temp = true;
+    }
+
+    public void ExitUI(){
+        computer.SetActive(false);
+        calendar.SetActive(false);
+        build1.SetActive(false);
+        //build2.SetActive(false);
+        door.SetActive(false);
+        buildCamera.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        playerModel.GetComponent<MeshRenderer>().enabled = true;
+        playerModel.GetComponent<PlayerController>().enabled = true;
+        lookComponent.enabled = true;
+        inUi = false;     
     }
 }
