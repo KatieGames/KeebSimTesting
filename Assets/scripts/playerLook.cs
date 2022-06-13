@@ -92,6 +92,7 @@ public class playerLook : MonoBehaviour
                     {
                         computer.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
                         lookComponent.enabled = false;
                         playerModel.GetComponent<MeshRenderer>().enabled = false;
                         playerModel.GetComponent<PlayerController>().enabled = false;
@@ -103,6 +104,7 @@ public class playerLook : MonoBehaviour
                     {
                         calendar.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
                         lookComponent.enabled = false;
                         playerModel.GetComponent<MeshRenderer>().enabled = false;
                         playerModel.GetComponent<PlayerController>().enabled = false;
@@ -113,6 +115,7 @@ public class playerLook : MonoBehaviour
                     {
                         build1.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
                         lookComponent.enabled = false;
                         playerModel.GetComponent<MeshRenderer>().enabled = false;
                         playerModel.GetComponent<PlayerController>().enabled = false;
@@ -124,6 +127,7 @@ public class playerLook : MonoBehaviour
                     {
                         build2.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
                         lookComponent.enabled = false;
                         playerModel.GetComponent<MeshRenderer>().enabled = false;
                         playerModel.GetComponent<PlayerController>().enabled = false;
@@ -134,6 +138,7 @@ public class playerLook : MonoBehaviour
                     {
                         door.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
                         lookComponent.enabled = false;
                         playerModel.GetComponent<MeshRenderer>().enabled = false;
                         playerModel.GetComponent<PlayerController>().enabled = false;
@@ -170,6 +175,7 @@ public class playerLook : MonoBehaviour
                 buildCamera.SetActive(false);
 
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 playerModel.GetComponent<MeshRenderer>().enabled = true;
                 playerModel.GetComponent<PlayerController>().enabled = true;
                 lookComponent.enabled = true;      
