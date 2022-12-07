@@ -115,8 +115,8 @@ public class emails : MonoBehaviour
 
         if(playerData.inboxOngoing.Contains(playerData.inboxMisc[buttonNumber]))
         {
-            buttonPanelBlock.GetComponent<Image>().enabled = true;
-            acceptButtonBlock.GetComponent<Image>().enabled = false; 
+            buttonPanelBlock.GetComponent<Image>().enabled = false;
+            acceptButtonBlock.GetComponent<Image>().enabled = true; 
             submitButton.SetActive(true);
         }
         else if(Decoder.DecodeEmail(email, 4) == "")
